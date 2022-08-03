@@ -1,0 +1,12 @@
+@import './vkui';
+@import './typography';
+
+body {
+  --speed: 255ms;
+
+  user-select: none !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}

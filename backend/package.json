@@ -1,0 +1,37 @@
+{
+  "private": true,
+  "name": "vmoji-import-backend",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "pm2 start ecosystem.config.cjs",
+    "start:prod": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --unhandled-rejections=warn ./build/index.js",
+    "dev": "node --experimental-modules --experimental-json-modules --experimental-specifier-resolution=node --unhandled-rejections=warn --loader ts-node/esm ./src/index.ts | pino-pretty",
+    "build": "tsc",
+    "eslint:check": "eslint ./src/**/*.{ts,tsx}",
+    "eslint:fix": "eslint ./src/**/*.{ts,tsx} --fix"
+  },
+  "author": "MrZillaGold <Pronin Egor | mrzillagold@gmail.com>",
+  "dependencies": {
+    "@fastify/cors": "^8.0.0",
+    "@sentry/node": "^7.3.0",
+    "@sinclair/typebox": "^0.24.25",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.1",
+    "fastify": "^4.3.0",
+    "fastify-plugin": "^4.0.0",
+    "pino-pretty": "^7.6.1",
+    "puregram": "^2.8.2",
+    "vk-io": "^4.6.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  }
+}

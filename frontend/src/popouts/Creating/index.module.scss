@@ -1,0 +1,61 @@
+@import '../../styles/mixins/media';
+
+.creating {
+  --animation-size: 248px;
+  --animation-margin-top-percent: 0.25;
+
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--vkui--color_background_content);
+
+  @include min-height-736 {
+    --animation-size: 264px;
+    --animation-margin-top-percent: 0.255;
+  }
+
+  &_error {
+    opacity: 1;
+
+    &__hidden {
+      opacity: 0;
+    }
+
+    &_buttons {
+      align-items: center !important;
+    }
+
+    :global(.vkuiButton--lvl-tertiary) {
+      top: unset !important;
+    }
+  }
+
+  &__desktop {
+    --animation-size: 320px;
+    --animation-margin-top: 156px;
+
+    :global(.vkuiFixedLayout) {
+      position: unset !important;
+    }
+  }
+
+  &_animation {
+    height: var(--animation-size);
+    width: var(--animation-size);
+    margin-top: calc(100vh * var(--animation-margin-top-percent));
+    margin-bottom: 24px;
+
+    &__desktop {
+      margin-top: var(--animation-margin-top) !important;
+    }
+  }
+
+  &_title {
+    color: var(--vkui--color_text_secondary);
+    text-align: center;
+    padding-bottom: 100px;
+  }
+}
+

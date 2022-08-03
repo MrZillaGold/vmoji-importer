@@ -1,0 +1,32 @@
+.preview {
+
+  &_title {
+    animation: opacity-in var(--speed);
+  }
+
+  &_bottom {
+    --preview-bottom-in-flex-direction: column-reverse;
+
+    position: relative;
+    display: flex;
+    flex-direction: var(--character-preview-bottom-in-flex-direction);
+    gap: var(--vkui--size_button_group_gap_medium--regular);
+    z-index: 100;
+
+    &__desktop {
+      --preview-bottom-in-flex-direction: row;
+
+      justify-content: flex-end;
+    }
+  }
+}
+
+@keyframes opacity-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,12 @@
+// iPhone 6/7/8 Plus
+@mixin min-height-736 {
+  @media (min-height: 736px) {
+    @content;
+  }
+}
+
+@mixin max-width-375 {
+  @media (max-width: 375px) {
+    @content;
+  }
+}

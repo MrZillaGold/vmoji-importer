@@ -1,0 +1,56 @@
+{
+  "private": true,
+  "name": "vmoji-importer",
+  "version": "1.0.0",
+  "description": "Импорт стикеров vmoji в Telegram",
+  "main": "./src/index.tsx",
+  "homepage": "./",
+  "scripts": {
+    "dev": "cross-env PORT=80 ESLINT_NO_DEV_ERRORS=true TSC_COMPILE_ON_ERROR=true DISABLE_ESLINT_PLUGIN=true WDS_SOCKET_PORT=0 react-scripts --openssl-legacy-provider start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts --openssl-legacy-provider build",
+    "deploy": "npm run-script build && vk-miniapps-deploy",
+    "tunnel": "vk-tunnel --insecure=1 --http-protocol=http --ws-protocol=ws --host=127.0.0.1 --port=80",
+    "eslint:check": "eslint ./src/**/*.{ts,tsx}",
+    "eslint:fix": "eslint ./src/**/*.{ts,tsx} --fix"
+  },
+  "author": "MrZillaGold <Pronin Egor | mrzillagold@gmail.com>",
+  "dependencies": {
+    "@happysanta/router": "^0.3.1",
+    "@vkontakte/icons": "^1.180.0",
+    "@vkontakte/mvk-mini-apps-scroll-helper": "1.2.0",
+    "@vkontakte/superappkit": "^1.53.0",
+    "@vkontakte/vk-bridge": "^2.7.0",
+    "@vkontakte/vk-qr": "^2.0.13",
+    "@vkontakte/vkui": "^4.34.1",
+    "axios": "^0.27.2",
+    "core-js": "^3.24.0",
+    "framer-motion": "^6.5.1",
+    "lottie-react": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.4",
+    "sass": "^1.53.0"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "@vkontakte/vk-miniapps-deploy": "^0.0.26",
+    "@vkontakte/vk-tunnel": "^0.1.0",
+    "cross-env": "^7.0.3",
+    "react-scripts": "^5.0.1",
+    "typescript-plugin-css-modules": "^3.4.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+.imported {
+
+  &_in {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &_illustration {
+    padding: 64px;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_code {
+    padding: 16px;
+
+    &_in {
+      padding: 16px;
+      width: 120px;
+      height: 120px;
+      border-radius: 16px;
+      background: var(--background_content);
+    }
+  }
+
+  &_caption {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    color: var(--text_secondary);
+    padding: 16px;
+  }
+
+  &__desktop {
+
+    :global(.vkuiModalPage__in) {
+      background: var(--background_page);
+    }
+  }
+}

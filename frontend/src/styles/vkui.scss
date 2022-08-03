@@ -1,0 +1,76 @@
+@import './mixins/media';
+
+:root {
+  --vkui--color_background_light_alpha--hover: rgba(174, 183, 194, 0.12);
+  --vkui--color_steel_gray: #6F7985;
+}
+
+.vkuiPanel__in {
+  background-color: var(--background_content) !important;
+}
+
+.vkuiHeader {
+  user-select: none;
+}
+
+.vkuiPanelHeader__in {
+  transition: background var(--speed);
+}
+
+// TODO: remove after fix https://github.com/VKCOM/VKUI/issues/2448#issuecomment-1134289277
+.vkuiPanelHeader__content-in {
+  font-family: var(--font-display) !important;
+}
+
+.vkuiPopper__arrow {
+  z-index: 100;
+}
+
+.vkuiPanelHeader__left .vkuiIcon--dismiss_24 {
+  color: var(--vkui--color_icon_secondary)
+}
+
+.vkuiSegmentedControl__slider {
+  box-shadow: none !important;
+}
+
+.vkuiAlert .vkuiModalDismissButton {
+  display: none;
+}
+
+.vkuiAlert--vkcom .vkuiAlert__text {
+  color: var(--vkui--color_text_subhead) !important;
+}
+
+.vkuiPanelHeaderButton .vkuiTitle,
+.vkuiTappable .vkuiTitle {
+  font-family: var(--font-common) !important;
+}
+
+.vkuiTitle {
+  font-family: var(--font-display) !important;
+}
+
+.vkuiSegmentedControlOption__content {
+  font-weight: 400 !important;
+}
+
+.vkuiSegmentedControl {
+  background: var(--vkui--color_field_background) !important;
+}
+
+.vkuiTitle--w-1 {
+  letter-spacing: var(--vkui--font_title1--letter_spacing--regular);
+}
+
+.vkuiTitle--w-2 {
+  letter-spacing: var(--vkui--font_title2--letter_spacing--regular);
+}
+
+.vkuiTitle--w-3 {
+  letter-spacing: var(--vkui--font_title3--letter_spacing--regular);
+}
+
+.vkuiPlaceholder__text {
+  white-space: pre-line;
+}

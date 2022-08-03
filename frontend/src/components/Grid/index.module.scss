@@ -1,0 +1,19 @@
+@import 'src/styles/mixins/media';
+
+.grid {
+  --grid-jusitfy-content: space-around;
+
+  opacity: 1;
+  display: flex;
+  flex-wrap: wrap;
+  transition: opacity 1ms;
+  justify-content: var(--grid-jusitfy-content);
+
+  & > * {
+    margin-bottom: var(--grid-row-gap);
+  }
+
+  &__last {
+    margin-bottom: 0;
+  }
+}
